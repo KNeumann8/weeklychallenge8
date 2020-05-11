@@ -6,28 +6,16 @@ package lab1;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse extends Course{
 
-    String courseName;
-    double credits;
-    String prerequisites;
-    private String courseNumber;
+    //private String courseName;
+    //private double credits;
+    private String prerequisites;
+    //private String courseNumber;
 
     public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
-    public double getCredits() {
-        return credits;
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
     }
 
     public void setCredits(double credits) {
@@ -36,7 +24,7 @@ public class IntroJavaCourse {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        super.setCredits(credits);
     }
 
     public String getPrerequisites() {
